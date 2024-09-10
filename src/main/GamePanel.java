@@ -1,3 +1,4 @@
+// The front displaying of the game
 package main;
 
 import java.awt.Color;
@@ -47,8 +48,7 @@ public class GamePanel extends JPanel implements Runnable {
 //	public void run() {
 //		double drawInterval = 1000000000 / FPS;	// ~ 0.0167 seconds per interval
 //		double nextDrawTime = System.nanoTime() + drawInterval;
-//		
-//		
+//	
 //		while (gameThread != null) {
 //			update();
 //			repaint();

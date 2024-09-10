@@ -1,3 +1,4 @@
+// Main class
 package main;
 
 import javax.swing.JFrame;

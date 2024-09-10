@@ -1,3 +1,4 @@
+// Handle the key input control for the game
 package main;
 
 import java.awt.event.KeyEvent;
