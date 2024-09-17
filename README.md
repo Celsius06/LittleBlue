@@ -1,8 +1,13 @@
-# LittleBlue (Blue Boy Adventure)
-This game is inspired by this man. Give him a big shoutout: https://www.youtube.com/@RyiSnow
-# Project Breakdown
-## 1. Core Concepts
-This is the core component of my game: The Game Loop. And this picture generally illutrates how it works
-![image](https://github.com/user-attachments/assets/d817e74e-e574-4f97-8f25-80c5598dcec3)
+# LittleBlue: Blue Boy Adventure
 
-This loop is being processed 60 times per second ~ 60FPS 
+Inspired by the talented man [RyiSnow](https://www.youtube.com/@RyiSnow). Huge shoutout to him for his amazing tutorials and inspiration! 🎉
+
+## Project Breakdown
+
+### 1. Core Concepts & Components
+
+At the heart of *LittleBue* lies the **Game Loop** — the essential engine that drives every frame of the game. 
+
+The game runs at **60 frames per second (FPS)**, meaning the Game Loop is processed 60 times per second, ensuring smooth and responsive gameplay. Here’s a visual representation of how the loop works:
+
+![Game Loop Diagram](https://github.com/user-attachments/assets/d817e74e-e574-4f97-8f25-80c5598dcec3)
