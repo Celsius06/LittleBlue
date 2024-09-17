@@ -1,6 +1,6 @@
 # LittleBlue: Blue Boy Adventure
 
-Inspired by the talented man [RyiSnow](https://www.youtube.com/@RyiSnow). Huge shoutout to him for his amazing tutorials and inspiration! 🎉
+**DISCLAIMER**: This project is greatly inspired by the talented man [RyiSnow](https://www.youtube.com/@RyiSnow). Huge shoutout to him for his amazing tutorials and inspiration! 🎉
 
 ## Project Breakdown
 
