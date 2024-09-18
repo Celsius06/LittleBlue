@@ -113,7 +113,6 @@ public class GamePanel extends JPanel implements Runnable {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D)g;
-		
 		// Draw tiles first so that the tiles will not overlap the player
 		tileM.draw(g2);		
 		// Then draw objects
@@ -124,6 +123,7 @@ public class GamePanel extends JPanel implements Runnable {
 		}
 		// Then draw player
 		player.draw(g2);		
+		// Then dispose
 		g2.dispose();
 	}
 	
