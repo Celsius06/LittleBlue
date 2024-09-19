@@ -16,6 +16,7 @@ public class Player extends Entity {
 	KeyHandler keyH;
 	
 	public final int screenX, screenY;
+	int hasKey = 0; // how many keys the player currently has
 	
 	public Player(GamePanel gp, KeyHandler keyH) {
 		this.gp = gp;
@@ -76,8 +77,10 @@ public class Player extends Entity {
 			// Check tile collision
 			collisionOn = false;
 			gp.cChecker.checkTile(this);
+			
 			// Check object collision
 			int objIndex = gp.cChecker.checkObject(this, true);
+			pickUpObject(objIndex);
 			
 			// If collision is false, player can move
 			if (collisionOn == false) {
@@ -88,7 +91,6 @@ public class Player extends Entity {
 				case "right": worldX += speed; break;
 				}
 			}
-			
 			spriteCounter++;
 			if (spriteCounter > 12) {
 				if (spriteNum == 1) {
@@ -105,7 +107,6 @@ public class Player extends Entity {
 //		g2.setColor(Color.white);
 //		g2.fillRect(x, y, gp.tileSize, gp.tileSize);
 		BufferedImage image = null;
-		
 		switch (direction) {
 		case "up":
 			if (spriteNum == 1) {
@@ -141,5 +142,26 @@ public class Player extends Entity {
 			break;
 		}
 		g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+	}
+	
+	public void pickUpObject(int i) {
+		if (i != 999) {
+			String objectName = gp.obj[i].name;
+			switch(objectName) {
+			case "Key":
+				hasKey++;
+				gp.obj[i] = null;
+				System.out.println("Key: " + hasKey);
+				break;
+			case "Door":
+				if(hasKey > 0) {
+					gp.obj[i] = null;
+					hasKey--;
+				}
+				System.out.println("Key: " + hasKey);
+				break;
+				
+			}
+		}
 	}
 }
