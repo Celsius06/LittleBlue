@@ -76,6 +76,9 @@ public class Player extends Entity {
 			// Check tile collision
 			collisionOn = false;
 			gp.cChecker.checkTile(this);
+			// Check object collision
+			int objIndex = gp.cChecker.checkObject(this, true);
+			
 			// If collision is false, player can move
 			if (collisionOn == false) {
 				switch(direction) {
