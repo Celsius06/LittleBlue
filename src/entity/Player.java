@@ -163,6 +163,7 @@ public class Player extends Entity {
 			case "Boots":
 				speed += 2;
 				gp.obj[i] = null;
+				break;
 			}
 		}
 	}
