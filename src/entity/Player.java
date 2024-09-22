@@ -16,7 +16,7 @@ public class Player extends Entity {
 	KeyHandler keyH;
 	
 	public final int screenX, screenY;
-	int hasKey = 0; // how many keys the player currently has
+	public int hasKey = 0; // how many keys the player currently has
 	
 	public Player(GamePanel gp, KeyHandler keyH) {
 		this.gp = gp;
