@@ -33,6 +33,7 @@ public class GamePanel extends JPanel implements Runnable {
 	TileManager tileM = new TileManager(this);
 	KeyHandler keyH = new KeyHandler();
 	Sound sound = new Sound();
+	Sound sound = new Sound();
 	public CollisionChecker cChecker = new CollisionChecker(this);
 	public AssetSetter aSetter = new AssetSetter(this);
 	Thread gameThread;
