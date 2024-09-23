@@ -159,13 +159,19 @@ public class Player extends Entity {
 					gp.playSFX(3);
 					gp.obj[i] = null;
 					hasKey--;
-				}
-
+					gp.ui.showMessage("You opened a door!");
+				} else { gp.ui.showMessage("You need a key to open this door!"); }
 				break;
 			case "Boots":
 				gp.playSFX(2);
 				speed += 2;
 				gp.obj[i] = null;
+				gp.ui.showMessage("You picked up a speed boost!");
+				break;
+			case "Chest":
+				gp.ui.gameFinished = true;
+				gp.stopMusic();
+				gp.playSFX(4);
 				break;
 			}
 		}
