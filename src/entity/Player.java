@@ -152,7 +152,7 @@ public class Player extends Entity {
 				gp.playSFX(1);
 				hasKey++;
 				gp.obj[i] = null;
-				System.out.println("Key: " + hasKey);
+				gp.ui.showMessage("You got a key!");
 				break;
 			case "Door":
 				if(hasKey > 0) {
@@ -160,7 +160,7 @@ public class Player extends Entity {
 					gp.obj[i] = null;
 					hasKey--;
 				}
-				System.out.println("Key: " + hasKey);
+
 				break;
 			case "Boots":
 				gp.playSFX(2);
