@@ -117,8 +117,16 @@ public class GamePanel extends JPanel implements Runnable {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D)g;
+		
+		// Debug to check for potential improvements 
+		long drawStart = 0;
+		if (keyH.checkDrawTime == true) {
+			drawStart = System.nanoTime();
+		}
+		
 		// Draw tiles first so that the tiles will not overlap the player
 		tileM.draw(g2);		
+		
 		// Then draw objects
 		for (int i = 0; i < obj.length; i++) {
 			if (obj[i] != null) {
@@ -129,6 +137,16 @@ public class GamePanel extends JPanel implements Runnable {
 		player.draw(g2);	
 		// Then draw the UI
 		ui.draw(g2);
+		
+		// Debug to check for potential improvements 
+		if (keyH.checkDrawTime == true) {
+			long drawEnd = System.nanoTime();
+			long passed = drawEnd - drawStart;
+			g2.setColor(Color.white);
+			g2.drawString("Draw Time: " + passed, 10, 400);
+			System.out.println("Draw Time: " + passed);
+		}
+
 		// Then dispose
 		g2.dispose();
 	}
