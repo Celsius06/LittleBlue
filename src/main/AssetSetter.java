@@ -48,17 +48,17 @@ public class AssetSetter {
 		gp.obj[7].worldY = 42 * gp.tileSize;
 		
 		// For debugging
-		gp.obj[8] = new OBJ_Key(gp);
-		gp.obj[8].worldX = 24 * gp.tileSize;
-		gp.obj[8].worldY = 21 * gp.tileSize;
-		
-		gp.obj[9] = new OBJ_Key(gp);
-		gp.obj[9].worldX = 25 * gp.tileSize;
-		gp.obj[9].worldY = 21 * gp.tileSize;
-		
-		gp.obj[10] = new OBJ_Key(gp);
-		gp.obj[10].worldX = 26 * gp.tileSize;
-		gp.obj[10].worldY = 21 * gp.tileSize;
+//		gp.obj[8] = new OBJ_Key(gp);
+//		gp.obj[8].worldX = 24 * gp.tileSize;
+//		gp.obj[8].worldY = 21 * gp.tileSize;
+//		
+//		gp.obj[9] = new OBJ_Key(gp);
+//		gp.obj[9].worldX = 25 * gp.tileSize;
+//		gp.obj[9].worldY = 21 * gp.tileSize;
+//		
+//		gp.obj[10] = new OBJ_Key(gp);
+//		gp.obj[10].worldX = 26 * gp.tileSize;
+//		gp.obj[10].worldY = 21 * gp.tileSize;
 
 	}
 }
