@@ -18,7 +18,7 @@ public class Player extends Entity {
 	KeyHandler keyH;
 	
 	public final int screenX, screenY;
-	public int hasKey = 0; // how many keys the player currently has
+//	public int hasKey = 0; // how many keys the player currently has
 	
 	public Player(GamePanel gp, KeyHandler keyH) {
 		this.gp = gp;
@@ -156,34 +156,7 @@ public class Player extends Entity {
 	
 	public void pickUpObject(int i) {
 		if (i != 999) {
-			String objectName = gp.obj[i].name;
-			switch(objectName) {
-			case "Key":
-				gp.playSFX(1);
-				hasKey++;
-				gp.obj[i] = null;
-				gp.ui.showMessage("You got a key!");
-				break;
-			case "Door":
-				if(hasKey > 0) {
-					gp.playSFX(3);
-					gp.obj[i] = null;
-					hasKey--;
-					gp.ui.showMessage("You opened a door!");
-				} else { gp.ui.showMessage("You need a key to open this door!"); }
-				break;
-			case "Boots":
-				gp.playSFX(2);
-				speed += 2;
-				gp.obj[i] = null;
-				gp.ui.showMessage("You picked up a speed boost!");
-				break;
-			case "Chest":
-				gp.ui.gameFinished = true;
-				gp.stopMusic();
-				gp.playSFX(4);
-				break;
-			}
+
 		}
 	}
 }
