@@ -14,14 +14,13 @@ import main.UtilityTool;
 import tile.Tile;
 
 public class Player extends Entity {
-	GamePanel gp;
 	KeyHandler keyH;
 	
 	public final int screenX, screenY;
-//	public int hasKey = 0; // how many keys the player currently has
 	
 	public Player(GamePanel gp, KeyHandler keyH) {
-		this.gp = gp;
+		super(gp);
+		
 		this.keyH = keyH;
 		
 		screenX = gp.screenWidth / 2 - (gp.tileSize / 2);
